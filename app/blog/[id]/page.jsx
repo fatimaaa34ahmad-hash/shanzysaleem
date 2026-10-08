@@ -27,36 +27,42 @@ export default function BlogPost({ params }) {
           Back to Blog
         </Link>
 
-        {/* Post Header */}
+        {/* Full-width Hero Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+          className='relative w-full h-[50vh] md:h-[60vh] rounded-3xl overflow-hidden mb-16 shadow-2xl group'
         >
-          <div className='flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-6'>
-            <span className='px-3 py-1 bg-[#c9f31d] text-black font-medium rounded-full uppercase tracking-wider text-xs'>
-              {post.category}
-            </span>
-            <span>{post.date}</span>
-            <span>•</span>
-            <span>{post.readTime}</span>
-            <span>•</span>
-            <span>By {post.author}</span>
-          </div>
+          {/* Background Image */}
+          <Image
+            src={post.image}
+            alt={post.title}
+            fill
+            className='object-cover transition-transform duration-700 group-hover:scale-105'
+            priority
+          />
+          {/* Gradient Overlay */}
+          <div className='absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent' />
+          
+          {/* Content Overlay */}
+          <div className='absolute bottom-0 left-0 right-0 p-8 md:p-12 flex flex-col justify-end h-full'>
+            <div className='flex flex-wrap items-center gap-4 text-sm text-gray-300 mb-6'>
+              <span className='px-4 py-1.5 bg-[#c9f31d] text-black font-bold rounded-full uppercase tracking-wider text-xs shadow-lg'>
+                {post.category}
+              </span>
+              <div className='flex items-center gap-3 backdrop-blur-md bg-black/30 px-4 py-1.5 rounded-full border border-white/10'>
+                <span>{post.date}</span>
+                <span className='text-[#c9f31d]'>•</span>
+                <span>{post.readTime}</span>
+                <span className='text-[#c9f31d]'>•</span>
+                <span>By {post.author}</span>
+              </div>
+            </div>
 
-          <h1 className='text-4xl md:text-5xl font-bold text-white mb-8 leading-tight'>
-            {post.title}
-          </h1>
-
-          {/* Featured Image */}
-          <div className='relative aspect-video w-full rounded-2xl overflow-hidden mb-12 shadow-2xl'>
-            <Image
-              src={post.image}
-              alt={post.title}
-              fill
-              className='object-cover'
-              priority
-            />
+            <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-4xl'>
+              {post.title}
+            </h1>
           </div>
         </motion.div>
 
