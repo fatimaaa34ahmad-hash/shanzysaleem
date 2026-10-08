@@ -1,7 +1,9 @@
 'use client';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
+import { blogPosts } from '@/data/blog';
 
 export default function Blog() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -14,93 +16,6 @@ export default function Blog() {
     { id: 'python', label: 'Python' },
     { id: 'ui-ux', label: 'UI/UX' },
     { id: 'tutorials', label: 'Tutorials' },
-  ];
-
-  const blogPosts = [
-    {
-      id: 1,
-      title: 'Mastering Glassmorphism in Modern Web Design',
-      excerpt:
-        'Explore the principles and techniques behind creating stunning glassmorphism effects that enhance user experience without sacrificing usability.',
-      content: 'Full content would be loaded from markdown...',
-      author: 'Shanzy',
-      date: '2024-01-15',
-      readTime: '8 min read',
-      category: 'design',
-      tags: ['Glassmorphism', 'CSS', 'Design Trends', 'UI/UX'],
-      featured: true,
-      image: '/blog/glassmorphism-guide.jpg',
-    },
-    {
-      id: 2,
-      title: 'Building Scalable Python APIs with FastAPI',
-      excerpt:
-        'A comprehensive guide to creating robust, high-performance APIs using FastAPI, including best practices for authentication and database integration.',
-      content: 'Full content would be loaded from markdown...',
-      author: 'Shanzy',
-      date: '2024-01-10',
-      readTime: '12 min read',
-      category: 'python',
-      tags: ['Python', 'FastAPI', 'API Development', 'Backend'],
-      featured: false,
-      image: '/blog/fastapi-guide.jpg',
-    },
-    {
-      id: 3,
-      title: 'The Future of React: Server Components and Beyond',
-      excerpt:
-        'Dive into the latest React features including Server Components, Suspense, and how they are reshaping modern web development.',
-      content: 'Full content would be loaded from markdown...',
-      author: 'Shanzy',
-      date: '2024-01-05',
-      readTime: '10 min read',
-      category: 'development',
-      tags: ['React', 'Next.js', 'Server Components', 'Frontend'],
-      featured: true,
-      image: '/blog/react-future.jpg',
-    },
-    {
-      id: 4,
-      title: 'User Research Methods for Better UX Design',
-      excerpt:
-        'Learn essential user research techniques that will help you create more user-centered designs and improve overall user satisfaction.',
-      content: 'Full content would be loaded from markdown...',
-      author: 'Shanzy',
-      date: '2023-12-28',
-      readTime: '6 min read',
-      category: 'ui-ux',
-      tags: ['User Research', 'UX Design', 'Design Process', 'User Testing'],
-      featured: false,
-      image: '/blog/user-research.jpg',
-    },
-    {
-      id: 5,
-      title: 'Building a Design System from Scratch',
-      excerpt:
-        'Step-by-step process of creating a comprehensive design system that scales across multiple products and platforms.',
-      content: 'Full content would be loaded from markdown...',
-      author: 'Shanzy',
-      date: '2023-12-20',
-      readTime: '15 min read',
-      category: 'design',
-      tags: ['Design System', 'Figma', 'Component Library', 'Scalability'],
-      featured: false,
-      image: '/blog/design-system.jpg',
-    },
-    {
-      id: 6,
-      title: 'Python Data Analysis: Pandas Tips and Tricks',
-      excerpt:
-        'Advanced pandas techniques for data manipulation and analysis that will boost your productivity and code efficiency.',
-      content: 'Full content would be loaded from markdown...',
-      author: 'Shanzy',
-      date: '2023-12-15',
-      readTime: '9 min read',
-      category: 'python',
-      tags: ['Python', 'Pandas', 'Data Analysis', 'Tips'],
-      featured: false,
-      image: '/blog/pandas-tips.jpg',
-    },
   ];
 
   const filteredPosts = blogPosts.filter((post) => {
@@ -232,10 +147,13 @@ export default function Blog() {
                     transition={{ duration: 0.3 }}
                     className='glass-card rounded-2xl overflow-hidden group'
                   >
-                    <div className='aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 relative overflow-hidden'>
-                      <div className='absolute inset-0 flex items-center justify-center'>
-                        <div className='text-6xl opacity-50'>📝</div>
-                      </div>
+                    <div className='aspect-video bg-gradient-to-br from-gray-800 to-gray-900 relative overflow-hidden'>
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        fill
+                        className='object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300'
+                      />
                       <div className='absolute top-4 left-4'>
                         <span className='px-3 py-1 bg-gradient-to-r from-yellow-400/80 to-orange-400/80 backdrop-blur-sm text-white text-xs font-semibold rounded-full'>
                           Featured
@@ -312,20 +230,13 @@ export default function Blog() {
                     transition={{ duration: 0.3 }}
                     className='glass-card rounded-2xl overflow-hidden group'
                   >
-                    <div className='aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 relative overflow-hidden'>
-                      <div className='absolute inset-0 flex items-center justify-center'>
-                        <div className='text-4xl opacity-50'>
-                          {post.category === 'design'
-                            ? '🎨'
-                            : post.category === 'development'
-                              ? '💻'
-                              : post.category === 'python'
-                                ? '🐍'
-                                : post.category === 'ui-ux'
-                                  ? '🎯'
-                                  : '📝'}
-                        </div>
-                      </div>
+                    <div className='aspect-video bg-gradient-to-br from-gray-800 to-gray-900 relative overflow-hidden'>
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        fill
+                        className='object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300'
+                      />
                     </div>
                     <div className='p-6'>
                       <div className='flex items-center text-sm text-gray-400 mb-3'>
