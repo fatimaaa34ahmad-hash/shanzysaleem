@@ -1,7 +1,4 @@
 import { NextResponse } from 'next/server';
-import { Resend } from 'resend';
-
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request) {
   try {
@@ -15,32 +12,11 @@ export async function POST(request) {
       );
     }
 
-    const { data, error } = await resend.emails.send({
-      from: 'Contact Form <onboarding@resend.dev>',
-      to: 'shanzysaleem8@gmail.com',
-      reply_to: email,
-      subject: `Portfolio Contact: ${subject}`,
-      html: `
-        <h3>New Contact Form Submission</h3>
-        <p><strong>Name:</strong> ${fullName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Subject:</strong> ${subject}</p>
-        <h4>Message:</h4>
-        <p>${message.replace(/\n/g, '<br>')}</p>
-      `,
-    });
-
-    if (error) {
-      console.error('Resend error:', error);
-      return NextResponse.json(
-        { error: 'Failed to send email' },
-        { status: 500 }
-      );
-    }
+    // Since Resend is removed, we'll just log the message and return success.
+    console.log('New Contact Form Submission:', { fullName, email, phone, subject, message });
 
     return NextResponse.json(
-      { message: 'Message sent successfully', data },
+      { message: 'Message sent successfully (simulated)' },
       { status: 200 }
     );
   } catch (error) {
