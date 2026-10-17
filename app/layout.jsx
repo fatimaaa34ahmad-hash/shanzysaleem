@@ -6,37 +6,37 @@ import Footer from '../components/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  metadataBase: new URL('https://shanzy-portfolio.vercel.app'),
-  title: 'Shanzy Saleem  UI/UX Designer & Web Developer',
+  metadataBase: new URL('https://shanzyseoexpert.com'),
+  title: 'Shopify SEO and AI Automation Expert | Shanzy Saleem',
   description:
-    'Portfolio of Shanzy Saleem  Creative UI/UX Designer and Web Developer. Specializing in Figma, Prototyping, SEO, and building modern web applications with Next.js.',
+    'Shopify SEO and AI Automation Expert | Helping Ecommerce Stores Grow with Data-Driven SEO + Automation | 12+ Years Experience. Specializing in Ecommerce Scaling, Search Engine Optimization, and Automated Workflows.',
   keywords:
-    'UI/UX Designer, Web Developer, Figma Expert, Prototyping, SEO, Next.js, Portfolio, Shanzy Saleem',
+    'Shopify SEO, AI Automation Expert, Ecommerce SEO, Data-Driven SEO, Shopify Growth, AI Automation, Web Developer, Shanzy Saleem',
   authors: [{ name: 'Shanzy Saleem' }],
   creator: 'Shanzy Saleem',
 
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://shanzy-portfolio.vercel.app',
-    title: 'Shanzy Saleem  UI/UX Designer & Web Developer',
+    url: 'https://shanzyseoexpert.com',
+    title: 'Shopify SEO and AI Automation Expert | Shanzy Saleem',
     description:
-      'Portfolio of Shanzy Saleem  Creative UI/UX Designer and Web Developer specializing in Figma, Prototyping, and Next.js.',
-    siteName: 'Shanzy Saleem Portfolio',
+      'Helping Ecommerce Stores Grow with Data-Driven SEO + Automation | 12+ Years Experience.',
+    siteName: 'Shanzy Saleem | Shopify SEO & AI Automation Expert',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Shanzy Saleem Portfolio',
+        alt: 'Shanzy Saleem - Shopify SEO and AI Automation Expert',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shanzy Saleem  UI/UX Designer & Web Developer',
+    title: 'Shopify SEO and AI Automation Expert | Shanzy Saleem',
     description:
-      'Portfolio of Shanzy Saleem  Creative UI/UX Designer and Web Developer specializing in Figma, Prototyping, and Next.js.',
+      'Helping Ecommerce Stores Grow with Data-Driven SEO + Automation | 12+ Years Experience.',
     images: ['/og-image.jpg'],
   },
 

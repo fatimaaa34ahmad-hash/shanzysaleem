@@ -214,11 +214,10 @@ export default function Navbar() {
                     Shanzy Saleem
                   </h2>
                   <p className='text-gray-300 text-base md:text-lg font-medium mb-3'>
-                    UI/UX Designer & Web Developer
+                    Shopify SEO & AI Automation Expert
                   </p>
                   <p className='text-gray-500 text-sm leading-relaxed mx-auto max-w-xs'>
-                    Transforming Ideas into Beautiful Digital Experiences with Modern UI/UX Design,
-                    Figma, SEO, and Next.js Development.
+                    Helping Ecommerce Stores Grow with Data-Driven SEO + AI Automation | 12+ Years Experience.
                   </p>
                 </motion.div>
 

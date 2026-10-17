@@ -199,9 +199,7 @@ export default function Footer() {
                   Shanzy
                 </Link>
                 <p className='mt-4 text-gray-400 max-w-md'>
-                  UI/UX Designer & Python Developer crafting modern,
-                  user-centered digital experiences with glassmorphism
-                  aesthetics and cutting-edge technology.
+                  Shopify SEO and AI Automation Expert helping ecommerce stores grow with data-driven SEO, automated workflows, and modern web solutions.
                 </p>
 
                 {/* Social Links */}

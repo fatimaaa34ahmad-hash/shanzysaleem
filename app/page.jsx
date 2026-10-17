@@ -37,11 +37,11 @@ export default function Home() {
   const [isDeleting, setIsDeleting] = useState(false);
 
   const titles = useMemo(() => [
-    'UI/UX Designer',
-    'Figma Expert',
+    'Shopify SEO Expert',
+    'AI Automation Specialist',
+    'Ecommerce Growth Consultant',
+    'Data-Driven SEO Strategist',
     'Web Developer',
-    'Prototyping Specialist',
-    'SEO Specialist',
   ], []);
 
   useEffect(() => {
@@ -188,8 +188,7 @@ export default function Home() {
                 transition={{ delay: 0.5 }}
                 className='text-white text-base md:text-lg leading-relaxed mb-10 max-w-xl'
               >
-                Transforming Ideas into Beautiful Digital Experiences with Modern UI/UX Design,
-                Figma Prototyping, SEO Optimization, and Web Developer.
+                Shopify SEO and AI Automation Expert | Helping Ecommerce Stores Grow with Data-Driven SEO + Automation | 12+ Years Experience.
               </motion.p>
 
               {/* CTA Buttons */}
