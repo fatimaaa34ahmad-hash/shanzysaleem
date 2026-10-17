@@ -9,11 +9,27 @@ export const metadata = {
   metadataBase: new URL('https://shanzyseoexpert.com'),
   title: 'Shopify SEO and AI Automation Expert | Shanzy Saleem',
   description:
-    'Shopify SEO and AI Automation Expert | Helping Ecommerce Stores Grow with Data-Driven SEO + Automation | 12+ Years Experience. Specializing in Ecommerce Scaling, Search Engine Optimization, and Automated Workflows.',
+    'Shopify SEO and AI Automation Expert helping ecommerce stores grow with data-driven SEO, automated workflows, and 12+ years of experience.',
   keywords:
     'Shopify SEO, AI Automation Expert, Ecommerce SEO, Data-Driven SEO, Shopify Growth, AI Automation, Web Developer, Shanzy Saleem',
   authors: [{ name: 'Shanzy Saleem' }],
   creator: 'Shanzy Saleem',
+
+  alternates: {
+    canonical: '/',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 
   openGraph: {
     type: 'website',
@@ -21,7 +37,7 @@ export const metadata = {
     url: 'https://shanzyseoexpert.com',
     title: 'Shopify SEO and AI Automation Expert | Shanzy Saleem',
     description:
-      'Helping Ecommerce Stores Grow with Data-Driven SEO + Automation | 12+ Years Experience.',
+      'Shopify SEO and AI Automation Expert helping ecommerce stores grow with data-driven SEO, automated workflows, and 12+ years of experience.',
     siteName: 'Shanzy Saleem | Shopify SEO & AI Automation Expert',
     images: [
       {
@@ -36,7 +52,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Shopify SEO and AI Automation Expert | Shanzy Saleem',
     description:
-      'Helping Ecommerce Stores Grow with Data-Driven SEO + Automation | 12+ Years Experience.',
+      'Shopify SEO and AI Automation Expert helping ecommerce stores grow with data-driven SEO, automated workflows, and 12+ years of experience.',
     images: ['/og-image.jpg'],
   },
 
