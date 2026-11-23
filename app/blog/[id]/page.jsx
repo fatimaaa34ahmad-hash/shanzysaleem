@@ -6,15 +6,16 @@ import { notFound } from 'next/navigation';
 import { blogPosts } from '@/data/blog';
 
 export default function BlogPost({ params }) {
-  const postId = parseInt(params.id);
-  const post = blogPosts.find((p) => p.id === postId);
+  const post =
+    blogPosts.find((p) => p.slug === params.id) ||
+    blogPosts.find((p) => p.id === parseInt(params.id));
 
   if (!post) {
     notFound();
   }
 
   // Related posts (exclude current)
-  const relatedPosts = blogPosts.filter((p) => p.id !== postId).slice(0, 3);
+  const relatedPosts = blogPosts.filter((p) => p.id !== post.id).slice(0, 3);
 
   return (
     <div className='min-h-screen bg-black text-white pt-24 pb-24'>
@@ -260,7 +261,7 @@ export default function BlogPost({ params }) {
                 {relatedPosts.map((rPost) => (
                   <Link
                     key={rPost.id}
-                    href={`/blog/${rPost.id}`}
+                    href={`/blog/${rPost.slug || rPost.id}`}
                     className='group block'
                   >
                     <p className='text-xs text-[#c9f31d] uppercase tracking-wider font-semibold mb-1'>
