@@ -64,7 +64,7 @@ export default function sitemap() {
 
   // Dynamic blog post pages
   const blogRoutes = blogPosts.map((post) => ({
-    url: `${baseUrl}/blog/${post.id}`,
+    url: `${baseUrl}/blog/${post.slug || post.id}`,
     lastModified: post.date ? new Date(post.date).toISOString() : currentDate,
     changeFrequency: 'weekly',
     priority: 0.85,
