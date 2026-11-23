@@ -1,6 +1,7 @@
 export const blogPosts = [
   {
     id: 1,
+    slug: 'mastering-glassmorphism-in-modern-web-design',
     title: 'Mastering Glassmorphism in Modern Web Design: Complete Guide',
     excerpt: 'Explore the principles, design mechanics, CSS performance secrets, and UX best practices behind creating stunning glassmorphism interfaces that convert.',
     author: 'Shanzy Saleem',
@@ -75,6 +76,7 @@ export const blogPosts = [
   },
   {
     id: 2,
+    slug: 'building-scalable-python-apis-with-fastapi',
     title: 'Building Scalable Python APIs with FastAPI: High Performance Backend Architecture',
     excerpt: 'Comprehensive deep dive into building enterprise-grade, asynchronous Python microservices with FastAPI, Pydantic v2, and PostgreSQL.',
     author: 'Shanzy Saleem',
@@ -144,6 +146,7 @@ async def process_store(payload: StoreWebhook):
   },
   {
     id: 3,
+    slug: 'the-future-of-react-server-components',
     title: 'The Future of React: Server Components, Streaming, and Next.js Architecture',
     excerpt: 'An exhaustive examination of React Server Components (RSC), Suspense streaming, and how the Next.js App Router fundamentally transforms frontend performance.',
     author: 'Shanzy Saleem',
@@ -204,6 +207,7 @@ export default function DashboardPage() {
   },
   {
     id: 4,
+    slug: 'high-converting-user-research-methods',
     title: 'High-Converting User Research Methods for Modern Product Designers',
     excerpt: 'Step-by-step framework to uncover latent customer needs, eliminate UX friction, and turn user insights into measurable business growth.',
     author: 'Shanzy Saleem',
@@ -247,6 +251,7 @@ export default function DashboardPage() {
   },
   {
     id: 5,
+    slug: 'building-an-enterprise-design-system-from-scratch',
     title: 'Building an Enterprise Design System from Scratch: Figma to Code',
     excerpt: 'How to architect, document, and scale an enterprise-level design system with design tokens, component variants, and bulletproof handoff workflows.',
     author: 'Shanzy Saleem',
@@ -305,6 +310,7 @@ export default function DashboardPage() {
   },
   {
     id: 6,
+    slug: 'python-data-analysis-automation-pandas-strategies',
     title: 'Python Data Analysis & Automation: High-Efficiency Pandas Strategies',
     excerpt: 'Master vectorized computations, memory footprint optimization, and automated data pipelines with Python Pandas for high-throughput ecommerce analytics.',
     author: 'Shanzy Saleem',
@@ -361,6 +367,7 @@ def optimize_ecommerce_data(df: pd.DataFrame) -> pd.DataFrame:
   },
   {
     id: 7,
+    slug: 'top-seo-expert-in-pakistan-2026',
     title: 'Top SEO Expert in Pakistan 2026: How to Spot the Real One Before You Hire',
     excerpt: 'Searching for the best SEO expert in Pakistan? Before you hire an SEO expert in Pakistan, here is how I judge real proof, what I have actually delivered, and the questions that separate a real expert from a good sales pitch.',
     author: 'Shanzy Saleem',
