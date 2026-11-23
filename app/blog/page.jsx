@@ -184,7 +184,7 @@ export default function Blog() {
                         ))}
                       </div>
                       <Link
-                        href={`/blog/${post.id}`}
+                        href={`/blog/${post.slug || post.id}`}
                         className='inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-200'
                       >
                         Read More
@@ -262,7 +262,7 @@ export default function Blog() {
                         ))}
                       </div>
                       <Link
-                        href={`/blog/${post.id}`}
+                        href={`/blog/${post.slug || post.id}`}
                         className='inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-200'
                       >
                         Read More
