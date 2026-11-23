@@ -9,7 +9,7 @@ export const metadata = {
   metadataBase: new URL('https://shanzyseoexpert.com'),
   title: 'Shopify SEO and AI Automation Expert | Shanzy Saleem',
   description:
-    'Shopify SEO and AI Automation Expert helping ecommerce stores grow with data-driven SEO, automated workflows, and 12+ years of experience.',
+    'Shopify SEO and AI Automation Expert helping ecommerce stores grow with data-driven SEO, automated workflows, and 3 years of experience.',
   keywords:
     'Shopify SEO, AI Automation Expert, Ecommerce SEO, Data-Driven SEO, Shopify Growth, AI Automation, Web Developer, Shanzy Saleem',
   authors: [{ name: 'Shanzy Saleem' }],
@@ -37,7 +37,7 @@ export const metadata = {
     url: 'https://shanzyseoexpert.com',
     title: 'Shopify SEO and AI Automation Expert | Shanzy Saleem',
     description:
-      'Shopify SEO and AI Automation Expert helping ecommerce stores grow with data-driven SEO, automated workflows, and 12+ years of experience.',
+      'Shopify SEO and AI Automation Expert helping ecommerce stores grow with data-driven SEO, automated workflows, and 3 years of experience.',
     siteName: 'Shanzy Saleem | Shopify SEO & AI Automation Expert',
     images: [
       {
@@ -52,7 +52,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Shopify SEO and AI Automation Expert | Shanzy Saleem',
     description:
-      'Shopify SEO and AI Automation Expert helping ecommerce stores grow with data-driven SEO, automated workflows, and 12+ years of experience.',
+      'Shopify SEO and AI Automation Expert helping ecommerce stores grow with data-driven SEO, automated workflows, and 3 years of experience.',
     images: ['/og-image.jpg'],
   },
 
