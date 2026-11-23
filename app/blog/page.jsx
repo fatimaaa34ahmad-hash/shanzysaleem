@@ -16,6 +16,7 @@ export default function Blog() {
     { id: 'python', label: 'Python' },
     { id: 'ui-ux', label: 'UI/UX' },
     { id: 'tutorials', label: 'Tutorials' },
+    { id: 'seo', label: 'SEO' },
   ];
 
   const filteredPosts = blogPosts.filter((post) => {
