@@ -24,7 +24,7 @@ export default function BlogPost({ params }) {
         <div className='flex items-center justify-between'>
           <Link
             href='/blog'
-            className='inline-flex items-center text-sm font-medium text-gray-400 hover:text-[#c9f31d] transition-colors duration-200 group'
+            className='inline-flex items-center text-base font-medium text-gray-400 hover:text-[#c9f31d] transition-colors duration-200 group'
           >
             <span className='w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mr-3 group-hover:bg-[#c9f31d] group-hover:text-black transition-all'>
               <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
@@ -34,7 +34,7 @@ export default function BlogPost({ params }) {
             Back to All Articles
           </Link>
 
-          <span className='text-xs uppercase tracking-widest text-gray-500 font-mono'>
+          <span className='text-sm uppercase tracking-widest text-gray-500 font-mono'>
             Article #{post.id}
           </span>
         </div>
@@ -73,7 +73,7 @@ export default function BlogPost({ params }) {
             {post.title}
           </h1>
 
-          <p className='text-lg md:text-xl text-gray-300 leading-relaxed font-light border-l-2 border-[#c9f31d] pl-5 py-1 mb-10'>
+          <p className='text-xl md:text-2xl text-gray-200 leading-relaxed font-light border-l-2 border-[#c9f31d] pl-5 py-1 mb-10'>
             {post.excerpt}
           </p>
 
@@ -114,12 +114,12 @@ export default function BlogPost({ params }) {
                       <span className='w-7 h-7 rounded-lg bg-[#c9f31d]/10 border border-[#c9f31d]/30 text-[#c9f31d] flex items-center justify-center font-mono text-xs font-bold'>
                         {idx + 1 < 10 ? `0${idx + 1}` : idx + 1}
                       </span>
-                      <h2 className='text-xl sm:text-2xl font-bold text-white'>
+                      <h2 className='text-2xl sm:text-3xl font-bold text-white'>
                         {section.heading}
                       </h2>
                     </div>
 
-                    <p className='text-gray-300 leading-relaxed text-base sm:text-lg mb-6'>
+                    <p className='text-gray-200 leading-loose text-lg sm:text-xl mb-6'>
                       {section.body}
                     </p>
 
@@ -129,7 +129,7 @@ export default function BlogPost({ params }) {
                         {section.points.map((point, pIdx) => (
                           <div key={pIdx} className='flex items-start gap-3'>
                             <span className='mt-1.5 w-2 h-2 rounded-full bg-[#c9f31d] flex-shrink-0 shadow-[0_0_8px_#c9f31d]' />
-                            <p className='text-gray-300 text-base leading-relaxed'>
+                            <p className='text-gray-200 text-lg leading-relaxed'>
                               {point}
                             </p>
                           </div>
@@ -140,11 +140,11 @@ export default function BlogPost({ params }) {
                     {/* Pro Tip Box */}
                     {section.proTip && (
                       <div className='mt-6 p-4 sm:p-5 rounded-xl bg-gradient-to-r from-[#c9f31d]/10 to-transparent border-l-4 border-[#c9f31d]'>
-                        <div className='flex items-center gap-2 text-[#c9f31d] font-bold text-sm mb-1'>
+                        <div className='flex items-center gap-2 text-[#c9f31d] font-bold text-base mb-1'>
                           <span>💡</span>
                           <span>Pro Tip & Expert Strategy</span>
                         </div>
-                        <p className='text-gray-300 text-sm leading-relaxed'>
+                        <p className='text-gray-200 text-base leading-relaxed'>
                           {section.proTip}
                         </p>
                       </div>
@@ -180,13 +180,13 @@ export default function BlogPost({ params }) {
             {/* Tags & Share */}
             <div className='mt-12 pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-4'>
               <div className='flex flex-wrap items-center gap-2'>
-                <span className='text-xs uppercase tracking-wider text-gray-400 font-semibold mr-1'>
+                <span className='text-sm uppercase tracking-wider text-gray-400 font-semibold mr-1'>
                   Tags:
                 </span>
                 {post.tags.map((tag) => (
                   <span
                     key={tag}
-                    className='px-3.5 py-1.5 bg-white/5 border border-white/10 text-gray-300 rounded-full text-xs font-medium hover:bg-white/10 hover:text-white transition-all'
+                    className='px-3.5 py-1.5 bg-white/5 border border-white/10 text-gray-300 rounded-full text-sm font-medium hover:bg-white/10 hover:text-white transition-all'
                   >
                     #{tag}
                   </span>
@@ -195,7 +195,7 @@ export default function BlogPost({ params }) {
 
               <Link
                 href='/contact'
-                className='inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#c9f31d] hover:underline'
+                className='inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[#c9f31d] hover:underline'
               >
                 Discuss This Topic With Me →
               </Link>
@@ -217,15 +217,15 @@ export default function BlogPost({ params }) {
                 </div>
                 <div>
                   <h3 className='font-bold text-white text-base'>Shanzy Saleem</h3>
-                  <p className='text-xs text-[#c9f31d]'>Shopify SEO & AI Expert</p>
+                  <p className='text-sm text-[#c9f31d]'>Shopify SEO & AI Expert</p>
                 </div>
               </div>
-              <p className='text-xs text-gray-400 leading-relaxed mb-4'>
+              <p className='text-sm text-gray-300 leading-relaxed mb-4'>
                 Helping ecommerce stores, brands & founders scale traffic, search rankings, and automate business processes with AI.
               </p>
               <Link
                 href='/contact'
-                className='block text-center w-full py-2.5 px-4 bg-[#c9f31d] text-black font-bold text-xs uppercase tracking-wider rounded-xl hover:bg-white transition-all shadow-md'
+                className='block text-center w-full py-2.5 px-4 bg-[#c9f31d] text-black font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-white transition-all shadow-md'
               >
                 Work With Me
               </Link>
@@ -233,10 +233,10 @@ export default function BlogPost({ params }) {
 
             {/* Key Takeaways Card */}
             <div className='glass-card p-6 rounded-2xl border border-white/10 bg-white/[0.02]'>
-              <h3 className='font-bold text-white text-sm uppercase tracking-wider mb-4 flex items-center gap-2'>
+              <h3 className='font-bold text-white text-base uppercase tracking-wider mb-4 flex items-center gap-2'>
                 <span className='text-[#c9f31d]'>⚡</span> Quick Takeaways
               </h3>
-              <ul className='space-y-3 text-xs text-gray-300'>
+              <ul className='space-y-3 text-sm text-gray-200'>
                 <li className='flex items-start gap-2'>
                   <span className='text-[#c9f31d] font-bold'>✓</span>
                   <span>Actionable, industry-tested frameworks only.</span>
@@ -254,7 +254,7 @@ export default function BlogPost({ params }) {
 
             {/* Related Articles */}
             <div className='glass-card p-6 rounded-2xl border border-white/10 bg-white/[0.02]'>
-              <h3 className='font-bold text-white text-sm uppercase tracking-wider mb-4'>
+              <h3 className='font-bold text-white text-base uppercase tracking-wider mb-4'>
                 Related Reads
               </h3>
               <div className='space-y-4'>
@@ -264,13 +264,13 @@ export default function BlogPost({ params }) {
                     href={`/blog/${rPost.slug || rPost.id}`}
                     className='group block'
                   >
-                    <p className='text-xs text-[#c9f31d] uppercase tracking-wider font-semibold mb-1'>
+                    <p className='text-sm text-[#c9f31d] uppercase tracking-wider font-semibold mb-1'>
                       {rPost.category}
                     </p>
-                    <h4 className='text-sm text-gray-200 font-semibold group-hover:text-[#c9f31d] transition-colors line-clamp-2'>
+                    <h4 className='text-base text-gray-200 font-semibold group-hover:text-[#c9f31d] transition-colors line-clamp-2'>
                       {rPost.title}
                     </h4>
-                    <span className='text-[11px] text-gray-500 mt-1 block'>
+                    <span className='text-xs text-gray-400 mt-1 block'>
                       {rPost.readTime}
                     </span>
                   </Link>
