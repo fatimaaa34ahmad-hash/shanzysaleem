@@ -162,17 +162,17 @@ export default function Blog() {
                       </div>
                     </div>
                     <div className='p-6'>
-                      <div className='flex items-center text-sm text-gray-400 mb-3'>
+                      <div className='flex items-center text-base text-gray-400 mb-3'>
                         <span>{post.date}</span>
                         <span className='mx-2'>•</span>
                         <span>{post.readTime}</span>
                         <span className='mx-2'>•</span>
                         <span className='capitalize'>{post.category}</span>
                       </div>
-                      <h3 className='text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200'>
+                      <h3 className='text-2xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200'>
                         {post.title}
                       </h3>
-                      <p className='text-gray-400 mb-4'>{post.excerpt}</p>
+                      <p className='text-gray-300 text-lg leading-relaxed mb-4'>{post.excerpt}</p>
                       <div className='flex flex-wrap gap-2 mb-4'>
                         {post.tags.slice(0, 3).map((tag) => (
                           <span
@@ -240,15 +240,15 @@ export default function Blog() {
                       />
                     </div>
                     <div className='p-6'>
-                      <div className='flex items-center text-sm text-gray-400 mb-3'>
+                      <div className='flex items-center text-base text-gray-400 mb-3'>
                         <span>{post.date}</span>
                         <span className='mx-2'>•</span>
                         <span>{post.readTime}</span>
                       </div>
-                      <h3 className='text-lg font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200'>
+                      <h3 className='text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200'>
                         {post.title}
                       </h3>
-                      <p className='text-gray-400 mb-4 text-sm'>
+                      <p className='text-gray-300 mb-4 text-base leading-relaxed'>
                         {post.excerpt}
                       </p>
                       <div className='flex flex-wrap gap-2 mb-4'>
